@@ -1,0 +1,38 @@
+git init
+
+git lfs trac "authsystem.rar"
+
+git add .gitattributes
+
+git add authsystem.rar
+
+git commit -m "django authsystem"
+
+git remote add authsystem.rar https://github.com/wadi-sudo/authsystem.git
+
+git push --set-upstream authsystem.rar master
+
+
+
+____________________push to heroku_________________
+
+
+pip freeze > requirements.txt
+
+
+git init
+git add .
+git commit -m "first commit"
+
+heroku login
+heroku create app_name
+git push heroku master
+heroku open
+
+heroku run python manage.py migrate
+
+
+
+git add .
+git commit -m "edit"
+git push heroku master
